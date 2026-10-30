@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <linearGradient id="bg-itgel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7b1113" />
+      <stop offset="50%" stop-color="#1f080a" />
+      <stop offset="100%" stop-color="#050508" />
+    </linearGradient>
+    <radialGradient id="glow-itgel" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#e63946" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="overlay-itgel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.2" />
+      <stop offset="55%" stop-color="#000" stop-opacity="0.1" />
+      <stop offset="85%" stop-color="#000" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#050508" stop-opacity="1" />
+    </linearGradient>
+    <filter id="shadow-itgel" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="900" fill="url(#bg-itgel)"/>
+  <rect width="600" height="900" fill="url(#glow-itgel)"/>
+
+  <!-- Geometric Grid & Accents -->
+  <g opacity="0.12" stroke="#e63946" stroke-width="1">
+    <circle cx="300" cy="450" r="260" fill="none"/>
+    <circle cx="300" cy="450" r="320" fill="none" stroke-dasharray="8 12"/>
+    <line x1="300" y1="50" x2="300" y2="850"/>
+    <line x1="50" y1="450" x2="550" y2="450"/>
+  </g>
+
+  <!-- Central Emblem / Movie Icon -->
+  <g filter="url(#shadow-itgel)">
+    <path d="M300 380 C260 300 170 320 170 410 C170 490 300 590 300 590 C300 590 430 490 430 410 C430 320 340 300 300 380 Z" fill="none" stroke="#e63946" stroke-width="8" opacity="0.85"/>
+           <polyline points="150,450 240,450 270,390 300,500 330,420 360,450 450,450" fill="none" stroke="#f4a261" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Gradient Overlay -->
+  <rect width="600" height="900" fill="url(#overlay-itgel)"/>
+
+  <!-- Top Badges -->
+  <g transform="translate(40, 50)">
+    <rect width="90" height="28" rx="6" fill="#e63946" opacity="0.9"/>
+    <text x="45" y="19" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="12" fill="#fff" text-anchor="middle" letter-spacing="1">4K UHD</text>
+  </g>
+  <g transform="translate(470, 50)">
+    <rect width="90" height="28" rx="6" fill="#18181f" stroke="#333" stroke-width="1"/>
+    <text x="45" y="19" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13" fill="#f4a261" text-anchor="middle">★ 8.9</text>
+  </g>
+
+  <!-- Laurel & Festival Award (Middle-bottom) -->
+  <g transform="translate(300, 630)" text-anchor="middle">
+    <!-- Wreath Left -->
+    <path d="M-90,0 C-110,-20 -105,-45 -85,-55 C-95,-35 -80,-15 -60,0" fill="#f4a261" opacity="0.75"/>
+    <path d="M-75,10 C-100,5 -105,-15 -85,-30 C-90,-10 -75,5 -50,10" fill="#f4a261" opacity="0.6"/>
+    <!-- Wreath Right -->
+    <path d="M90,0 C110,-20 105,-45 85,-55 C95,-35 80,-15 60,0" fill="#f4a261" opacity="0.75"/>
+    <path d="M75,10 C100,5 105,-15 85,-30 C90,-10 75,5 50,10" fill="#f4a261" opacity="0.6"/>
+    <!-- Laurel Texts -->
+    <text y="-32" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="11" fill="#f4a261" letter-spacing="3">ASIAN WORLD FILM FESTIVAL</text>
+    <text y="-16" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="9" fill="#e2e8f0" letter-spacing="2">AUDIENCE AWARD WINNER</text>
+  </g>
+
+  <!-- Bottom Titles & Details -->
+  <g transform="translate(300, 725)" text-anchor="middle">
+    <text y="0" font-family="'Segoe UI', 'Montserrat', Arial, sans-serif" font-weight="900" font-size="44" fill="#ffffff" letter-spacing="3" filter="url(#shadow-itgel)">ИТГЭЛ</text>
+    <text y="32" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="14" fill="#f4a261" letter-spacing="4">TRUST • 2016</text>
+    <text y="58" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="12" fill="#94a3b8" letter-spacing="3">ДРАМ • ЭР ЗОРИГ</text>
+
+    <!-- Bottom credits line -->
+    <line x1="-180" y1="80" x2="180" y2="80" stroke="#334155" stroke-width="1"/>
+    <text y="102" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748b" letter-spacing="2">ITGEL KINO • CINEMATIC EXPERIENCE</text>
+  </g>
+</svg>

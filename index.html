@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ITGEL KINO - Монгол Киноны Ертөнц | Итгэл Кино Сайт</title>
+  <meta name="description" content="Монголын шилдэг кино бүтээлүүд, 'Итгэл' киноны тусгай танилцуулга, шууд үзэх тоглуулагч, трейлер, үнэлгээ, сэтгэгдэл." />
+  
+  <!-- Favicon & Stylesheet -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER / NAV
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#home" class="logo-link">
+        <img src="assets/logo.svg" alt="ITGEL KINO Logo" class="logo-img" />
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Нүүр</a></li>
+          <li><a href="itgel-movie.html" class="nav-link">"Итгэл" бүрэн хуудас</a></li>
+          <li><a href="#movies" class="nav-link">Бүх кино</a></li>
+          <li><a href="#request" class="nav-link">Кино санал болгох</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Live Search -->
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Кино, жүжигчин хайх..." />
+        </div>
+
+        <!-- Watchlist Trigger -->
+        <button class="btn-watchlist-toggle" id="btnWatchlistToggle" title="Миний жагсаалт">
+          <span>★ Жагсаалт</span>
+          <span class="watchlist-badge" id="watchlistCountBadge">0</span>
+        </button>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Цэс нээх">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO BANNER ("ИТГЭЛ" FLAGSHIP MOVIE)
+       ======================================================================== -->
+  <section class="hero-banner" id="home">
+    <img src="assets/backdrop-itgel.svg" alt="Итгэл кино backdrop" class="hero-backdrop-img" />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badges">
+          <span class="badge-featured">Онцлох бүтээл</span>
+          <span class="badge-rating">★ 8.9 / 10</span>
+          <span class="badge-meta">2016 он</span>
+          <span class="badge-meta">4K Ultra HD</span>
+          <span class="badge-meta">1 цаг 48 мин</span>
+        </div>
+
+        <h1 class="hero-title">ИТГЭЛ</h1>
+        <div class="hero-english-title">TRUST • ASIAN WORLD FILM FESTIVAL WINNER</div>
+
+        <p class="hero-synopsis">
+          Хүнд хэцүү өвчин, ээдрээт хувь тавилантай нүүр тулсан залуу өөрийн хүсэл мөрөөдөл, амьдрах итгэл найдвараа алдалгүй, хайртай гэр бүл, анд нөхдийнхөө төлөө хэрхэн тэмцэж буй тухай сэтгэл догдлом, ухаарал хайрласан бодит түүх.
+        </p>
+
+        <div class="hero-quote">
+          "Хүнд итгэл л байвал хамгийн харанхуй өдрүүдийг ч даван туулж чаддаг..."
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" id="heroPlayBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Шууд үзэх
+          </button>
+          <button class="btn-secondary" id="heroTrailerBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V8h14v10z"/>
+            </svg>
+            Трейлер
+          </button>
+          <button class="btn-icon-circle" id="heroBookmarkBtn" title="Жагсаалтад нэмэх">
+            ☆
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SPOTLIGHT SECTION: "ИТГЭЛ" КИНОНЫ ТУХАЙ ДЭЛГЭРЭНГҮЙ
+       ======================================================================== -->
+  <section class="spotlight-section" id="itgel-spotlight">
+    <div class="spotlight-container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">"Итгэл" Уран Сайхны Кино</h2>
+          <p class="section-subtitle">Монгол кино урлагийн чанар, түүхийг дэлхийн тавцанд таниулсан шилдэг бүтээл</p>
+        </div>
+      </div>
+
+      <div class="spotlight-grid">
+        <div class="spotlight-poster-wrapper">
+          <img src="assets/poster-itgel.svg" alt="Итгэл киноны постер" />
+        </div>
+
+        <div class="spotlight-details">
+          <h3>ИТГЭЛ (2016)</h3>
+          <p style="color: var(--accent-gold); font-weight: 600; margin-bottom: 16px;">
+            Найруулагч: Б.Ганболд | Продюсер: Б.Амарсайхан
+          </p>
+
+          <p style="color: #cbd5e1; line-height: 1.8; margin-bottom: 20px;">
+            "Итгэл" кино нь АНУ-ын Лос Анжелес хотноо зохион байгуулагдсан "Asian World Film Festival"-аас үзэгчдийн таашаал хүртсэн шилдэг бүтээлийн шагналыг хүртэж, Оскарын шагнал гардуулах ёслолын шилдэг гадаад киноны төрөлд Монгол улсаас албан ёсоор нэр дэвшиж байсан билээ. Киноны гол дүр болох Итгэлийн дүрийг МУСТА Б.Амарсайхан сэтгэл зүрхээ зориулан бүтээсэн юм.
+          </p>
+
+          <div class="spotlight-awards">
+            <div class="award-item">
+              <span class="award-icon">🏆</span>
+              <span><strong>Asian World Film Festival</strong> - Үзэгчдийн нэрэмжит шагнал (Audience Award)</span>
+            </div>
+            <div class="award-item">
+              <span class="award-icon">🏆</span>
+              <span><strong>Улаанбаатар Олон Улсын Кино Наадам (UBIFF)</strong> - Шилдэг найруулагч</span>
+            </div>
+            <div class="award-item">
+              <span class="award-icon">🏆</span>
+              <span><strong>Academy Awards (Oscars)</strong> - Монгол улсаас Гадаад киноны төрөлд нэр дэвшигч</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px;">
+            <strong style="color: #fff; font-size: 0.95rem;">Гол дүрүүдэд:</strong>
+            <div class="cast-pills">
+              <span class="cast-pill">Б.Амарсайхан (Итгэл)</span>
+              <span class="cast-pill">С.Болд-Эрдэнэ</span>
+              <span class="cast-pill">Ц.Цэрэнболд</span>
+              <span class="cast-pill">Б.Мишээл</span>
+              <span class="cast-pill">Т.Ариунчимэг</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px;">
+            <button class="btn-primary" id="spotlightWatchBtn">
+              ▶ Киног эхлүүлэх
+            </button>
+            <button class="btn-secondary" id="spotlightDetailBtn">
+              Сэтгэгдэл & Тэмдэглэл
+            </button>
+            <a href="itgel-movie.html" class="btn-secondary" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+              Бүрэн хуудас үзэх →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTROLS BAR: CATEGORIES, GENRES & SORT
+       ======================================================================== -->
+  <section class="controls-section" id="movies">
+    <div class="controls-bar">
+      <div class="filter-row-top">
+        <h2 class="filter-heading">Монгол кино сан</h2>
+        
+        <div class="filter-actions">
+          <!-- Sort Dropdown -->
+          <div class="sort-select-wrapper">
+            <select class="sort-select" id="sortSelect">
+              <option value="rating-desc">Үнэлгээгээр (Өндрөөс нам)</option>
+              <option value="year-desc">Шинээр нэмэгдсэн</option>
+              <option value="year-asc">Хуучин үеийн сорууд</option>
+              <option value="title-asc">Нэрээр (А-Я)</option>
+            </select>
+            <span class="sort-select-arrow">▼</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Genre Pills -->
+      <div class="genre-pills" id="genrePills">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MOVIES GRID
+       ======================================================================== -->
+  <section class="movies-section">
+    <div class="movies-grid" id="moviesGrid">
+      <!-- Rendered dynamically by JS -->
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       REQUEST / FEEDBACK SECTION
+       ======================================================================== -->
+  <section class="request-section" id="request">
+    <div class="request-container">
+      <h2>Үзэхийг хүссэн кино байна уу?</h2>
+      <p>Манай санд оруулахыг хүсэж буй Монгол бүтээлийн нэрийг илгээнэ үү. Бид шуурхай нэмэх болно.</p>
+
+      <form class="request-form" id="requestMovieForm">
+        <div class="form-group">
+          <label for="requestName">Таны нэр</label>
+          <input type="text" id="requestName" class="form-control" placeholder="Жишээ: Батбаяр" required />
+        </div>
+        <div class="form-group">
+          <label for="requestTitle">Киноны нэр</label>
+          <input type="text" id="requestTitle" class="form-control" placeholder="Жишээ: Мандухай сэцэн хатан, Тань руу нүүж явна..." required />
+        </div>
+        <div class="form-group">
+          <label for="requestNote">Нэмэлт тайлбар (сонголттой)</label>
+          <textarea id="requestNote" class="form-control" rows="3" placeholder="Хэзээ гарсан, ямар чанартай үзэхийг хүсэж байна вэ?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="align-self: flex-start;">
+          Хүсэлт илгээх
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       VIDEO PLAYER MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="playerModal">
+    <div class="player-modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span style="color: var(--accent-red); font-size: 1.2rem;">▶</span>
+          <h3 class="modal-movie-title" id="playerMovieTitle">Тоглуулагч</h3>
+        </div>
+        <button class="modal-close-btn" id="btnClosePlayer" title="Хаах">✕</button>
+      </div>
+
+      <div class="video-container">
+        <video id="mainVideoPlayer" class="video-element" controls controlsList="nodownload">
+          Таны хөтөч видео тоглуулахыг дэмжихгүй байна.
+        </video>
+      </div>
+
+      <div class="player-bar-options">
+        <div class="server-pills">
+          <span style="font-size: 0.85rem; color: var(--text-muted); margin-right: 6px;">Сервер:</span>
+          <button class="server-btn active" data-server="Сервер 1 (Full HD)">Сервер 1 (Үндсэн)</button>
+          <button class="server-btn" data-server="Сервер 2 (4K Ultra)">Сервер 2 (VIP)</button>
+          <button class="server-btn" data-server="Сервер 3 (Албан ёсны трейлер)">Сервер 3 (Трейлер)</button>
+        </div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary);">
+          Дуу: Монгол хэлээр (Original 5.1 Surround)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MOVIE DETAIL MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="detail-modal-box">
+      <div style="display: flex; justify-content: flex-end; margin-bottom: 12px;">
+        <button class="modal-close-btn" id="btnCloseDetail" title="Хаах">✕</button>
+      </div>
+      <div id="detailModalBody">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       WATCHLIST DRAWER
+       ======================================================================== -->
+  <div class="watchlist-drawer" id="watchlistDrawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">
+        <span>★</span> Миний жагсаалт
+      </h3>
+      <button class="modal-close-btn" id="btnCloseDrawer">✕</button>
+    </div>
+    <div class="drawer-content" id="drawerWatchlistContent">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION
+       ======================================================================== -->
+  <div class="toast-notification" id="toastNotification">
+    <span style="color: var(--accent-gold);">✔</span>
+    <span class="toast-message">Мэдэгдэл</span>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="ITGEL KINO" style="height: 40px;" />
+          <p>
+            ITGEL KINO - Монголын шилдэг кино уран бүтээлүүдийг нэгтгэсэн, "Итгэл" киноны онцлох цахим платформ.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ангилал</h4>
+          <ul class="footer-links">
+            <li><a href="#movies">Шилдэг бүтээлүүд</a></li>
+            <li><a href="#movies">Түүхэн кино</a></li>
+            <li><a href="#movies">Драм & Хайр сэтгэл</a></li>
+            <li><a href="#movies">Инээдмийн кино</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Холбоос</h4>
+          <ul class="footer-links">
+            <li><a href="#itgel-spotlight">"Итгэл" кино</a></li>
+            <li><a href="#request">Кино санал болгох</a></li>
+            <li><a href="#home">Шууд үзэх</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Төслийн мэдээлэл</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6;">
+            IT Хичээл: Веб хөгжүүлэлт 8-р долоо хоног.<br>
+            Кино сайт бие даалтын ажил.<br>
+            Хөгжүүлсэн: 2026 он.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ITGEL KINO. Бүх эрх хуулиар хамгаалагдсан.</div>
+        <div>Монгол кино урлагийн сор бүтээлүүдийг түгээн дэлгэрүүлэв.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/movies-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

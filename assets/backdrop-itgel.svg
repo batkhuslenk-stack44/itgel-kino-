@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bbg-itgel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7b1113" />
+      <stop offset="40%" stop-color="#1f080a" />
+      <stop offset="100%" stop-color="#07070b" />
+    </linearGradient>
+    <radialGradient id="bglow-itgel" cx="70%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#e63946" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="vignette" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#07070b" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#07070b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#07070b" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="vignette-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#07070b" stop-opacity="0" />
+      <stop offset="70%" stop-color="#07070b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#07070b" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bbg-itgel)"/>
+  <rect width="1920" height="1080" fill="url(#bglow-itgel)"/>
+
+  <!-- Right side hero graphical motif -->
+  <g transform="translate(1300, 520) scale(1.6)" opacity="0.85">
+    <path d="M300 380 C260 300 170 320 170 410 C170 490 300 590 300 590 C300 590 430 490 430 410 C430 320 340 300 300 380 Z" fill="none" stroke="#e63946" stroke-width="8" opacity="0.85"/>
+           <polyline points="150,450 240,450 270,390 300,500 330,420 360,450 450,450" fill="none" stroke="#f4a261" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Ambient rays & light -->
+  <g opacity="0.15" stroke="#e63946">
+    <circle cx="1300" cy="520" r="420" fill="none" stroke-width="2"/>
+    <circle cx="1300" cy="520" r="580" fill="none" stroke-width="1" stroke-dasharray="20 20"/>
+  </g>
+
+  <!-- Vignette overlays for text readability -->
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+  <rect width="1920" height="1080" fill="url(#vignette-bottom)"/>
+</svg>

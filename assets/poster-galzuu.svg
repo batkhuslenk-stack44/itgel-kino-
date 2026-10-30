@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <linearGradient id="bg-galzuu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#021812" />
+      <stop offset="100%" stop-color="#050508" />
+    </linearGradient>
+    <radialGradient id="glow-galzuu" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#06d6a0" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#06d6a0" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="overlay-galzuu" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.2" />
+      <stop offset="55%" stop-color="#000" stop-opacity="0.1" />
+      <stop offset="85%" stop-color="#000" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#050508" stop-opacity="1" />
+    </linearGradient>
+    <filter id="shadow-galzuu" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="900" fill="url(#bg-galzuu)"/>
+  <rect width="600" height="900" fill="url(#glow-galzuu)"/>
+
+  <!-- Geometric Grid & Accents -->
+  <g opacity="0.12" stroke="#06d6a0" stroke-width="1">
+    <circle cx="300" cy="450" r="260" fill="none"/>
+    <circle cx="300" cy="450" r="320" fill="none" stroke-dasharray="8 12"/>
+    <line x1="300" y1="50" x2="300" y2="850"/>
+    <line x1="50" y1="450" x2="550" y2="450"/>
+  </g>
+
+  <!-- Central Emblem / Movie Icon -->
+  <g filter="url(#shadow-galzuu)">
+    <rect x="200" y="390" width="200" height="130" fill="none" stroke="#06d6a0" stroke-width="7" rx="20"/>
+           <line x1="200" y1="450" x2="400" y2="450" stroke="#118ab2" stroke-width="5"/>
+           <circle cx="250" cy="530" r="25" fill="#06d6a0"/>
+           <circle cx="350" cy="530" r="25" fill="#06d6a0"/>
+           <line x1="220" y1="360" x2="380" y2="360" stroke="#06d6a0" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Gradient Overlay -->
+  <rect width="600" height="900" fill="url(#overlay-galzuu)"/>
+
+  <!-- Top Badges -->
+  <g transform="translate(40, 50)">
+    <rect width="90" height="28" rx="6" fill="#06d6a0" opacity="0.9"/>
+    <text x="45" y="19" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="12" fill="#fff" text-anchor="middle" letter-spacing="1">4K UHD</text>
+  </g>
+  <g transform="translate(470, 50)">
+    <rect width="90" height="28" rx="6" fill="#18181f" stroke="#333" stroke-width="1"/>
+    <text x="45" y="19" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13" fill="#118ab2" text-anchor="middle">★ 8.1</text>
+  </g>
+
+  <!-- Laurel & Festival Award (Middle-bottom) -->
+  <g transform="translate(300, 630)" text-anchor="middle">
+    <!-- Wreath Left -->
+    <path d="M-90,0 C-110,-20 -105,-45 -85,-55 C-95,-35 -80,-15 -60,0" fill="#118ab2" opacity="0.75"/>
+    <path d="M-75,10 C-100,5 -105,-15 -85,-30 C-90,-10 -75,5 -50,10" fill="#118ab2" opacity="0.6"/>
+    <!-- Wreath Right -->
+    <path d="M90,0 C110,-20 105,-45 85,-55 C95,-35 80,-15 60,0" fill="#118ab2" opacity="0.75"/>
+    <path d="M75,10 C100,5 105,-15 85,-30 C90,-10 75,5 50,10" fill="#118ab2" opacity="0.6"/>
+    <!-- Laurel Texts -->
+    <text y="-32" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="11" fill="#118ab2" letter-spacing="3">EMOTION FILMS</text>
+    <text y="-16" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="9" fill="#e2e8f0" letter-spacing="2">ОНЫ ШИЛДЭГ ИНЭЭДМИЙН КИНО</text>
+  </g>
+
+  <!-- Bottom Titles & Details -->
+  <g transform="translate(300, 725)" text-anchor="middle">
+    <text y="0" font-family="'Segoe UI', 'Montserrat', Arial, sans-serif" font-weight="900" font-size="44" fill="#ffffff" letter-spacing="3" filter="url(#shadow-galzuu)">ГАЛЗУУ ЗУГААЛГА</text>
+    <text y="32" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="14" fill="#118ab2" letter-spacing="4">CRAZY TRIP • 2019</text>
+    <text y="58" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="12" fill="#94a3b8" letter-spacing="3">ИНЭЭДЭМ • ЗАЛУУС</text>
+
+    <!-- Bottom credits line -->
+    <line x1="-180" y1="80" x2="180" y2="80" stroke="#334155" stroke-width="1"/>
+    <text y="102" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748b" letter-spacing="2">ITGEL KINO • CINEMATIC EXPERIENCE</text>
+  </g>
+</svg>

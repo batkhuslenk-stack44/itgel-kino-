@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bbg-zurhnii-hilen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581c87" />
+      <stop offset="40%" stop-color="#130420" />
+      <stop offset="100%" stop-color="#07070b" />
+    </linearGradient>
+    <radialGradient id="bglow-zurhnii-hilen" cx="70%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#b5179e" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#b5179e" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="vignette" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#07070b" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#07070b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#07070b" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="vignette-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#07070b" stop-opacity="0" />
+      <stop offset="70%" stop-color="#07070b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#07070b" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bbg-zurhnii-hilen)"/>
+  <rect width="1920" height="1080" fill="url(#bglow-zurhnii-hilen)"/>
+
+  <!-- Right side hero graphical motif -->
+  <g transform="translate(1300, 520) scale(1.6)" opacity="0.85">
+    <line x1="220" y1="340" x2="380" y2="560" stroke="#f72585" stroke-width="8" stroke-linecap="round"/>
+           <line x1="380" y1="340" x2="220" y2="560" stroke="#f72585" stroke-width="8" stroke-linecap="round"/>
+           <circle cx="300" cy="450" r="60" fill="none" stroke="#e9c46a" stroke-width="6"/>
+           <polygon points="300,360 320,440 300,540 280,440" fill="#b5179e"/>
+  </g>
+
+  <!-- Ambient rays & light -->
+  <g opacity="0.15" stroke="#b5179e">
+    <circle cx="1300" cy="520" r="420" fill="none" stroke-width="2"/>
+    <circle cx="1300" cy="520" r="580" fill="none" stroke-width="1" stroke-dasharray="20 20"/>
+  </g>
+
+  <!-- Vignette overlays for text readability -->
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+  <rect width="1920" height="1080" fill="url(#vignette-bottom)"/>
+</svg>

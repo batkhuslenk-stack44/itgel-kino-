@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>"Итгэл" Уран Сайхны Кино (2016) | ITGEL KINO</title>
+  <meta name="description" content="'Итгэл' (2016) Монголын шилдэг уран сайхны кино. Азийн кино наадмын шагналт бүтээлийг бүрэн эхээр нь үзэх, мэдээлэл, дүрүүд." />
+  
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    .page-hero {
+      position: relative;
+      padding: 130px 24px 60px;
+      background: linear-gradient(180deg, rgba(10,10,15,0.7) 0%, #0a0a0f 100%), url('assets/backdrop-itgel.svg') center/cover no-repeat;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .breadcrumb a:hover {
+      color: var(--accent-red);
+    }
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .player-section {
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      border: 1px solid var(--border-color);
+      margin-bottom: 50px;
+    }
+    .char-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      margin: 24px 0 40px;
+    }
+    .char-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+    }
+    .char-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-red), var(--accent-gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 auto 12px;
+      box-shadow: 0 4px 15px rgba(230,57,70,0.4);
+    }
+    .quote-card {
+      background: rgba(244, 162, 97, 0.06);
+      border-left: 4px solid var(--accent-gold);
+      padding: 24px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #f8fafc;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.svg" alt="ITGEL KINO" class="logo-img" />
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">← Нүүр хуудас руу буцах</a></li>
+          <li><a href="#player" class="nav-link active">Кино үзэх</a></li>
+          <li><a href="#about-film" class="nav-link">Түүх & Дүрүүд</a></li>
+          <li><a href="#awards" class="nav-link">Шагналууд</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="index.html#movies" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem;">
+          Бүх Монгол кино
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-container">
+      <div class="breadcrumb">
+        <a href="index.html">Нүүр</a>
+        <span>/</span>
+        <a href="index.html#movies">Монгол кино</a>
+        <span>/</span>
+        <span style="color: #fff;">Итгэл (2016)</span>
+      </div>
+
+      <div class="hero-badges">
+        <span class="badge-featured">Шилдэг бүтээл</span>
+        <span class="badge-rating">★ 8.9 / 10</span>
+        <span class="badge-meta">2016 он</span>
+        <span class="badge-meta">4K UHD</span>
+        <span class="badge-meta">108 минут</span>
+      </div>
+
+      <h1 class="hero-title">ИТГЭЛ</h1>
+      <div class="hero-english-title">TRUST • ASIAN WORLD FILM FESTIVAL AUDIENCE AWARD</div>
+      <p class="hero-synopsis" style="max-width: 850px;">
+        МУСТА Б.Амарсайханы гол дүрд нь тоглож, продюсерлосон "Итгэл" уран сайхны кино нь хүний сэтгэлийн хат, амьдрах итгэл, хайр энэрэл, анд нөхрийн үнэнч нөхөрлөлийг өгүүлсэн Монголын орчин үеийн сод бүтээл билээ.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cinema Video Player Section -->
+  <section class="page-container" id="player" style="margin-top: 20px;">
+    <div class="player-section">
+      <div style="padding: 16px 24px; background: #12121a; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">
+        <div style="font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+          <span style="color: var(--accent-red);">▶</span> ИТГЭЛ (2016) - Кино тоглуулагч (Албан ёсны 4K)
+        </div>
+        <div style="color: var(--accent-gold); font-size: 0.9rem; font-weight: 600;">
+          HD 1080p • 5.1 Дуугаралт
+        </div>
+      </div>
+
+      <div class="video-container">
+        <video class="video-element" controls poster="assets/backdrop-itgel.svg" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+          Таны хөтөч видео тоглуулахыг дэмжихгүй байна.
+        </video>
+      </div>
+
+      <div class="player-bar-options">
+        <div class="server-pills">
+          <button class="server-btn active">Сервер 1 (Full HD)</button>
+          <button class="server-btn">Сервер 2 (VIP Cloud)</button>
+          <button class="server-btn">Сервер 3 (Трейлер)</button>
+        </div>
+        <div style="color: var(--text-secondary); font-size: 0.9rem;">
+          Төрөл: Драм, Эр зориг, Гэр бүл
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Film & Synopsis -->
+  <section class="page-container" id="about-film" style="padding-bottom: 60px;">
+    <div style="display: grid; grid-template-columns: 320px 1fr; gap: 40px; align-items: start;">
+      <div>
+        <img src="assets/poster-itgel.svg" alt="Итгэл постер" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);" />
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin-top: 20px;">
+          <h4 style="margin-bottom: 12px; color: #fff;">Бүтээлийн мэдээлэл</h4>
+          <div style="font-size: 0.9rem; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary);">
+            <div><strong>Найруулагч:</strong> Б.Ганболд</div>
+            <div><strong>Зохиолч:</strong> Б.Амарсайхан</div>
+            <div><strong>Продюсер:</strong> Prime Pictures</div>
+            <div><strong>Зураглаач:</strong> Д.Ангараг</div>
+            <div><strong>Нээлт:</strong> 2016 оны 9-р сар</div>
+            <div><strong>Үргэлжлэх:</strong> 108 минут</div>
+            <div><strong>Насны ангилал:</strong> 16+</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Киноны ерөнхий агуулга</h2>
+        <p style="color: #cbd5e1; line-height: 1.8; margin-bottom: 16px;">
+          Хүний амьдралд урьдчилан тааварлашгүй олон бартаа саад тохиолддог. Залуу нас, эрч хүчээр дүүрэн явсан Итгэл хүнд өвчин туссанаа мэдсэнээр түүний амьдрал орвонгоороо эргэнэ. Гэвч тэрээр гутарч бууж өгөхийн оронд хайртай гэр бүл, анд нөхдөө ухаарал хайрласан, бат бөх холбоогоор холбохын төлөө өөрийн бүх хүчээ дайчилдаг.
+        </p>
+
+        <div class="quote-card">
+          "Хүнд итгэл л байвал хамгийн харанхуй өдрүүдийг ч даван туулж чаддаг. Итгэл найдвараа алдана гэдэг амьдралаа алдсантай адил."
+        </div>
+
+        <!-- Awards Section -->
+        <h3 id="awards" style="font-size: 1.4rem; font-weight: 700; margin: 30px 0 16px;">Хүртсэн шагналууд ба Амжилт</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="award-item">
+            <span class="award-icon">🏆</span>
+            <div>
+              <strong>Asian World Film Festival (Лос Анжелес, АНУ)</strong>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Үзэгчдийн нэрэмжит шилдэг кино шагнал (Audience Choice Award)</div>
+            </div>
+          </div>
+          <div class="award-item">
+            <span class="award-icon">🏆</span>
+            <div>
+              <strong>Улаанбаатар Олон Улсын Кино Наадам (UBIFF)</strong>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Шилдэг найруулагч, Шилдэг эрэгтэй гол дүр</div>
+            </div>
+          </div>
+          <div class="award-item">
+            <span class="award-icon">🏆</span>
+            <div>
+              <strong>89 дэх удаагийн Оскарын наадам (Academy Awards)</strong>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Шилдэг гадаад киноны төрөлд Монгол улсаас нэр дэвшигч</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cast Grid -->
+        <h3 style="font-size: 1.4rem; font-weight: 700; margin: 40px 0 16px;">Гол дүрүүд ба Жүжигчид</h3>
+        <div class="char-grid">
+          <div class="char-card">
+            <div class="char-avatar">А</div>
+            <h4 style="color: #fff;">Б.Амарсайхан</h4>
+            <div style="color: var(--accent-gold); font-size: 0.85rem;">Итгэлийн дүрд</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 6px;">
+              Амьдралын төлөө эцсээ хүртэл тэмцэгч
+            </p>
+          </div>
+
+          <div class="char-card">
+            <div class="char-avatar">Б</div>
+            <h4 style="color: #fff;">С.Болд-Эрдэнэ</h4>
+            <div style="color: var(--accent-gold); font-size: 0.85rem;">Төмөрийн дүрд</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 6px;">
+              Итгэлийн үнэнч анд нөхөр
+            </p>
+          </div>
+
+          <div class="char-card">
+            <div class="char-avatar">Ц</div>
+            <h4 style="color: #fff;">Ц.Цэрэнболд</h4>
+            <div style="color: var(--accent-gold); font-size: 0.85rem;">Ганбаагийн дүрд</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 6px;">
+              Ээдрээт хувь тавилантай дүр
+            </p>
+          </div>
+
+          <div class="char-card">
+            <div class="char-avatar">М</div>
+            <h4 style="color: #fff;">Б.Мишээл</h4>
+            <div style="color: var(--accent-gold); font-size: 0.85rem;">Ариунаагийн дүрд</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 6px;">
+              Гэр бүлийн халуун хайрын илэрхийлэл
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; display: flex; gap: 14px;">
+          <a href="index.html#movies" class="btn-primary">
+            Бусад Монгол кино үзэх
+          </a>
+          <button class="btn-secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            ↑ Дээш буцах
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container" style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+      <p style="margin-bottom: 8px;">© 2026 ITGEL KINO • "Итгэл" Уран Сайхны Киноны Цахим Танилцуулга</p>
+      <p>IT хичээл Веб хөгжүүлэлт бие даалт</p>
+    </div>
+  </footer>
+
+</body>
+</html>

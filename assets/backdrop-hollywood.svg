@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bbg-hollywood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="40%" stop-color="#1c0c02" />
+      <stop offset="100%" stop-color="#07070b" />
+    </linearGradient>
+    <radialGradient id="bglow-hollywood" cx="70%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffb703" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#ffb703" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="vignette" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#07070b" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#07070b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#07070b" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="vignette-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#07070b" stop-opacity="0" />
+      <stop offset="70%" stop-color="#07070b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#07070b" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bbg-hollywood)"/>
+  <rect width="1920" height="1080" fill="url(#bglow-hollywood)"/>
+
+  <!-- Right side hero graphical motif -->
+  <g transform="translate(1300, 520) scale(1.6)" opacity="0.85">
+    <rect x="200" y="380" width="200" height="150" fill="none" stroke="#ffb703" stroke-width="8" rx="12"/>
+           <polygon points="275,415 345,455 275,495" fill="#fb8500"/>
+           <circle cx="230" cy="340" r="24" fill="none" stroke="#ffb703" stroke-width="6"/>
+           <circle cx="370" cy="340" r="24" fill="none" stroke="#ffb703" stroke-width="6"/>
+  </g>
+
+  <!-- Ambient rays & light -->
+  <g opacity="0.15" stroke="#ffb703">
+    <circle cx="1300" cy="520" r="420" fill="none" stroke-width="2"/>
+    <circle cx="1300" cy="520" r="580" fill="none" stroke-width="1" stroke-dasharray="20 20"/>
+  </g>
+
+  <!-- Vignette overlays for text readability -->
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+  <rect width="1920" height="1080" fill="url(#vignette-bottom)"/>
+</svg>
